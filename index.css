@@ -1,0 +1,67 @@
+:root {
+  --primary: #D7D7D7;
+  --signature-blue: #039;
+  --signature-yellow: #FCB421;
+}
+
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+
+#topbar {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  
+  > #header-yellow, > #header-blue {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  > #header-yellow {
+    background-color: var(--signature-yellow);
+    height: 3.5rem;
+    left: -1.5em;
+    position: relative;
+    transform: skew(-20deg);
+    width: 350px;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    > #header-icon {
+      aspect-ratio: 1 / 1;
+      position: relative;
+      left: 2em;
+      transform: skew(20deg);
+      width: 3rem;
+    }
+
+    > #header-title {
+      color: white;
+      font-family: "Segoe UI";
+      font-size: 1.05em;
+      font-weight: 1000;
+      position: relative;
+      left: 3rem;
+      transform: skew(20deg);
+      width: 240px;
+    }
+  }
+
+  > #header-blue {
+    background-color: var(--signature-blue);
+    height: 2.8rem;
+    position: absolute;
+    width: 100vw;
+  }
+}
