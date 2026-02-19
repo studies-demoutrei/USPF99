@@ -6,7 +6,7 @@
 
 
 body {
-  background-color: var(--primary);
+  background-color: white;
   margin: 0;
   overflow-x: clip;
   overflow-y: auto;
@@ -140,12 +140,49 @@ body {
 main {
   > #banner {
     aspect-ratio: 3 / 1;
-    background-image: linear-gradient(to top, #101010, transparent), url('assets/banner.png');
+    background-image: linear-gradient(to top, #101010, 35%, transparent), url('assets/banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     top: calc((2.8rem - 3.5rem));
     width: 100vw;
+  }
+
+  > #main-content {
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1rem;
+    position: relative;
+    top: calc((2.8rem - 3.5rem) - 2rem);
+    width: 100%;
+  }
+}
+
+
+footer {
+  background-color: #000050;
+  padding: 5rem;
+  width: 100%;
+
+  > #footer-top {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    
+    > img {
+      aspect-ratio: 1 / 1;
+      width: 4.3rem;
+    }
+
+    > #name {
+      color: white;
+      font-family: "Rubik";
+      font-size: 1.2em;
+      font-weight: bold;
+      width: 17rem;
+    }
   }
 }
